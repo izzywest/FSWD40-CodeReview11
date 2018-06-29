@@ -1,15 +1,12 @@
-<style>
-.logo {
-  width: 160px;
-}
+<link rel="stylesheet" href="style/main.css">
+
+<div class="nav_img alert alert-secondary"></div>
 
 
-</style>
 
-<div class="alert alert-secondary" style="height: 250px; background-image: url('style/img/bg2s.jpg'); background-repeat: no-repeat; background-position: absolute; background-size: cover; text-align: right;"></div>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="home.php"><img class="logo" src="style/img/logoW.png" alt=""></a>
+  <a class="navbar-brand" href="home.php"><img class="rotate logo" src="style/img/logoW.png" alt=""></a>
   
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -19,12 +16,19 @@
     <ul class="navbar-nav mr-auto">
 
         <li class="nav-item active">
-        <a class="nav-link" href="cars_list.php">Car list<span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="cars_list.php">Car list<span class="sr-only"></span></a>
         </li>
 
         <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-        </li> </ul>
+        <a class="nav-link" href="office_list.php">Office locations</a>
+        </li> 
+      
+        <li class="nav-item">
+        <a class="nav-link" href="cars_locations.php">Cars locations</a>
+        </li>
+      
+      </ul>
+
         <ul class="nav navbar-nav navbar-right">
 
         <li class="nav-item dropdown">

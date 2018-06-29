@@ -1,0 +1,101 @@
+nav {
+  margin-bottom: 10px;
+}
+
+.logo {
+  width: 160px;
+  -webkit-transition-duration: 0.8s;
+  transition-duration: 0.8s;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  overflow: hidden;
+}
+
+.logo:hover {
+  -webkit-transform: rotate(-15deg);
+  -moz-transform: rotate(-15deg);
+  -o-transform: rotate(-15deg);
+}
+
+.nav_img {
+  height: 250px;
+  background-image: url("img/bg2s.jpg");
+  background-repeat: no-repeat;
+  background-position: absolute;
+  background-size: cover;
+  text-align: right;
+}
+
+body,
+html {
+  height: 100%;
+}
+
+form {
+  width: 55%;
+  margin-left: 5%;
+}
+
+.bg {
+  background-image: url("img/background2.png");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.jumbotron {
+  color: #fdfdfb;
+  background-image: -webkit-gradient(linear, right top, left bottom, from(#d48c00), color-stop(#98ae2f), color-stop(#50c37a), color-stop(#00cfc4), to(#31d2f7));
+  background-image: linear-gradient(to left bottom, #d48c00, #98ae2f, #50c37a, #00cfc4, #31d2f7);
+}
+
+.cars_card {
+  width: 19rem;
+  margin-left: 4%;
+  margin-bottom: 10px;
+}
+
+.img {
+  position: relative;
+  float: left;
+  width: 19rem;
+  height: 170px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-filter: none;
+          filter: none;
+}
+
+img:hover {
+  filter: gray;
+  -webkit-filter: grayscale(1);
+  -webkit-transition: all .3s ease-in-out;
+}
+
+.listToggle {
+  display: none;
+}
+
+.btn {
+  margin-bottom: 10px;
+}
+
+#map-location {
+  width: 100%;
+  height: 500px;
+  float: right;
+}
+
+.loc_list {
+  width: 90%;
+}
+
+.btn-back {
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+/*# sourceMappingURL=main.css.map */

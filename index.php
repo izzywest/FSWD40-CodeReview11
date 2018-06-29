@@ -57,29 +57,11 @@ if( isset($_POST['btn-login']) ) {
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" href="style/main.css">
+
 <title>Login & Registration System</title>
 <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous"></head>
-
-<style>
- body, html {
-    height: 100%;
-}
-form {
-    width: 55%;
-    margin-left: 5%;
-}
-
-
-.bg {
-    background-image: url("style/img/background2.png");
-    height: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover; 
-} 
-
-</style>
 
 </head>
 <body class="container">
@@ -101,7 +83,7 @@ form {
             <input type="password" name="pass" class="form-control" placeholder="Your Password" maxlength="15" />
                 <span class="text-danger"><?php echo $passError; ?></span>
             <hr/>
-            <button class="btn btn-primary" type="submit" name="btn-login">Sign In</button>
+            <button class="btn btn-primary" type="submit" name="btn-login">Sign in</button>
             <hr/>
             <a href="register.php"><button type="button" class="btn btn-dark"><i class="fas fa-user-plus"></i> Sign up here</button></a>
    </form>

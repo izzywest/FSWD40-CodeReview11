@@ -83,10 +83,12 @@ $password = hash('sha256', $pass);
 <html>
 <head>
 <title>Login & Registration System</title>
+<link rel="stylesheet" href="style/main.css">
 <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous"></head>
 </head>
 <body class="container">
+<div class="bg">
   <form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" autocomplete="off">  
     <h2><i class="fas fa-user-plus"></i> Sign up here</h2><hr/>
       <?php
@@ -109,8 +111,10 @@ $password = hash('sha256', $pass);
     <hr/>
     <button type="submit" class="btn btn-block btn-primary" name="btn-signup">Sign Up</button>
     <hr/>
-    <a href="index.php"><i class="fas fa-sign-in-alt"></i> Sign in Here...</a>
+    <a href="index.php"><button type="button" class="btn btn-dark"><i class="fas fa-sign-in-alt"></i> Sign in here</button></a>
+
    </form>
+      </div>
 </body>
 </html>
 <?php ob_end_flush(); ?>
