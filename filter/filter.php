@@ -55,6 +55,7 @@ $sql = "SELECT *
    FROM car_data
    INNER JOIN loc_data ON car_data.fk_loc_id = loc_data.loc_id
    WHERE loc_id=" . $selected_val . "; ";
+
    
    $result = $conn->query($sql);
 

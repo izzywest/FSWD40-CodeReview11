@@ -48,8 +48,8 @@ CONTENT AFTER LOGIN
 ............. -->
 
 <!-- ............
-select location filter -->    
-<form action="filter/filter.php" method="post">
+select location countFunction -->    
+<form action="countFunction.php" method="post">
     <div class="select">
         <select name="locValue">
             <option> -- Select location -- </option>
