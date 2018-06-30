@@ -38,7 +38,7 @@ $result = $conn->query($sql);
 
 <body>
     <div class="container">
-    <a href="task7.php"><button type="button" class="btn-back btn btn-dark btn-lg btn-block">&#129192; GO BACK</button></a>
+    <a href="countCarsLoc.php"><button type="button" class="btn-back btn btn-dark btn-lg btn-block">&#129192; GO BACK</button></a>
 
 <div>
 
@@ -51,36 +51,32 @@ $selected_val = $_POST['locValue'];  // Storing Selected Value In Variable
 }
 
 
-   
-
 $sql = "SELECT COUNT(DISTINCT car_id ) AS variable1
-FROM car_data 
+FROM car_data
 INNER JOIN loc_data ON car_data.fk_loc_id = loc_data.loc_id 
 WHERE loc_id=" . $selected_val . "; ";
-$sql2 = "SELECT * FROM loc_data;";
 
 
    $result = $conn->query($sql);
-   $result2 = $conn->query($sql2);
 
    if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
 
         echo "<div class='card cars_card'>";
         echo "  <div class='card-body'>";
-        echo "    <p class='card-text'>There are ". $row['variable1'] . " cars at the location with the loc_id: " . $selected_val ."</p>";
+        echo "    <p class='card-text'>There is/are<b> ". $row['variable1'] . "</b> car/s at the location with the loc_id: " . $selected_val ."</p>";
         echo "  </div>";
-
         echo "  </div>";
         echo "</div>";
-
     }
     } else {
     echo "0 results";
     }
 
     $conn->close();
-    ?>
+ 
+?>
+
 </div>
 
 

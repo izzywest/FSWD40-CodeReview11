@@ -48,7 +48,9 @@ CONTENT AFTER LOGIN
 ............. -->
 
 <!-- ............
-select location countFunction -->    
+select location countFunction -->   
+
+<h2>Select a location and show the amount of the cars that are there:</h2>
 <form action="countFunction.php" method="post">
     <div class="select">
         <select name="locValue">
@@ -66,7 +68,7 @@ select location countFunction -->
     </div>
     <div>
         <span class="input-group-btn">
-                <input class="btn btn-color" type="submit" name="submit" value="Get Selected Values" />
+                <input class="btn btn-color" type="submit" name="submit" value="Count cars at selected location" />
         </span>
     </div>
 </form>
@@ -78,32 +80,32 @@ select location countFunction -->
 <div class="row col-xs-12 col-sm-12 col-md-6 col-lg-9 col-xl-12">
 
 <?php
-   $sql = "SELECT *
-   FROM car_data
-   INNER JOIN loc_data ON car_data.fk_loc_id = loc_data.loc_id; ";
+//    $sql = "SELECT *
+//    FROM car_data
+//    INNER JOIN loc_data ON car_data.fk_loc_id = loc_data.loc_id; ";
    
-   $result = $conn->query($sql);
+//    $result = $conn->query($sql);
 
-   if ($result->num_rows > 0) {
-    while($row = $result->fetch_assoc()) {
+//    if ($result->num_rows > 0) {
+//     while($row = $result->fetch_assoc()) {
 
-        echo "<div class='card cars_card'>";
-        echo "  <div><img class='img card-img-top' src='" . $row['img'] . "' alt='cars'></div>";
-        echo "  <div class='card-body'>";
-        echo " <h5 class='card-title'><b>Current location: </b><span class='badge badge-info'>". $row['loc_name']."</span></h5>";
-        echo "    <p class='card-text'>". $row['car_manufacturer'] . " " . $row['car_model']. "</p>";
-                echo "<ul class='list-group list-group-flush'>";
-                    echo "<li class='list-group-item'>Price per day is " . $row['car_price'] . " €</li>";
-                    echo "<li class='list-group-item'>Max of " . $row['car_passenger'] . " passengers</li>";
-                echo "</ul>";
-        echo "  </div>";
-        echo "</div>";
-    }
-    } else {
-    echo "0 results";
-    }
+//         echo "<div class='card cars_card'>";
+//         echo "  <div><img class='img card-img-top' src='" . $row['img'] . "' alt='cars'></div>";
+//         echo "  <div class='card-body'>";
+//         echo " <h5 class='card-title'><b>Current location: </b><span class='badge badge-info'>". $row['loc_name']."</span></h5>";
+//         echo "    <p class='card-text'>". $row['car_manufacturer'] . " " . $row['car_model']. "</p>";
+//                 echo "<ul class='list-group list-group-flush'>";
+//                     echo "<li class='list-group-item'>Price per day is " . $row['car_price'] . " €</li>";
+//                     echo "<li class='list-group-item'>Max of " . $row['car_passenger'] . " passengers</li>";
+//                 echo "</ul>";
+//         echo "  </div>";
+//         echo "</div>";
+//     }
+//     } else {
+//     echo "0 results";
+//     }
 
-    $conn->close();
+//     $conn->close();
    
 ?>
 </div>
