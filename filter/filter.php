@@ -39,7 +39,6 @@ $result = $conn->query($sql);
 <body>
     <div class="container">
     <a href="../cars_locations.php"><button type="button" class="btn-back btn btn-dark btn-lg btn-block">&#129192; GO BACK</button></a>
-
 <div>
 
 <!-- .........................

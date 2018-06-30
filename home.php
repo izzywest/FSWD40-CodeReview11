@@ -17,9 +17,18 @@ QUERY
 ------------- */
 $sql = "SELECT * FROM *";
 $result = $conn->query($sql);
+
+
+// session check admin or no admin
+// select logged-in users detail
+$res=mysqli_query($conn, "SELECT * FROM users WHERE userType=".$_SESSION['userType']);
+$userRow=mysqli_fetch_array($res, MYSQLI_ASSOC);
+
+if($_SESSION['userType']='admin'){
+    header('location: countCarsLoc.php');
+}
+
 ?>
-
-
 
 
 <!DOCTYPE html>
@@ -54,11 +63,10 @@ CONTENT AFTER LOGIN
             <p>Click on the links in the navbar above to see the cars and office locations</p>
         </div>
 
-<div class="content">
 
 
 
-</div>
+
 
 
     </div>
