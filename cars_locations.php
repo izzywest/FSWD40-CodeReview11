@@ -1,5 +1,3 @@
-<link rel="stylesheet" href="style/main.css">
-
 <?php
 ob_start();
 session_start();
@@ -39,6 +37,8 @@ $result = $conn->query($sql);
 
 <body>
     <div class="container">
+    
+
 
 
 <!-- .............
@@ -49,8 +49,35 @@ NAVBAR
 <!-- .............
 CONTENT AFTER LOGIN
 ............. -->
-<!-- <button type="button" class="btn btn-outline-dark btn-md btn-block" id="toggleFn">Click to toggle details</button> -->
 
+<!-- ............
+select location filter -->    
+<form action="filter/filter.php" method="post">
+    <div class="select">
+        <select name="locValue">
+            <option> -- Select location -- </option>
+            <option value="11">22th district</option>
+            <option value="12">14th district</option>
+            <option value="13">Vienna Airport</option>
+            <option value="14">10th district</option>
+            <option value="15">23th district</option>
+            <option value="16">11th district</option>
+            <option value="17">1st district</option>
+        </select>
+            <div class="select_arrow">
+            </div>
+    </div>
+    <div>
+        <span class="input-group-btn">
+                <input class="btn btn-color" type="submit" name="submit" value="Get Selected Values" />
+        </span>
+    </div>
+</form>
+
+
+
+
+<!-- <button type="button" class="btn btn-outline-dark btn-md btn-block" id="toggleFn">Click to toggle details</button> -->
 <div class="row col-xs-12 col-sm-12 col-md-6 col-lg-9 col-xl-12">
 
 <?php
@@ -74,7 +101,6 @@ CONTENT AFTER LOGIN
                 echo "</ul>";
         echo "  </div>";
         echo "</div>";
-
     }
     } else {
     echo "0 results";
