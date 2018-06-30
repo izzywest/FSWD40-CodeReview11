@@ -36,8 +36,13 @@ $result = $conn->query($sql);
 
 
 <body>
+
+
     <div class="container">
     
+
+
+
 <!-- .............
 NAVBAR
 ............... -->
@@ -72,9 +77,6 @@ select location countFunction -->
         </span>
     </div>
 </form>
-
-
-
 
 <!-- <button type="button" class="btn btn-outline-dark btn-md btn-block" id="toggleFn">Click to toggle details</button> -->
 <div class="row col-xs-12 col-sm-12 col-md-6 col-lg-9 col-xl-12">

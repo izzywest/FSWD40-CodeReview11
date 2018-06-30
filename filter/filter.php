@@ -39,7 +39,8 @@ $result = $conn->query($sql);
 <body>
     <div class="container">
     <a href="../cars_locations.php"><button type="button" class="btn-back btn btn-dark btn-lg btn-block">&#129192; GO BACK</button></a>
-<div>
+    <div style="width:35%;">
+
 
 <!-- .........................
 GET VALUE FORM COMBO BOX
@@ -75,7 +76,7 @@ $sql = "SELECT *
 
     }
     } else {
-    echo "0 results";
+    echo "No results, please go back and select another location";
     }
 
     $conn->close();

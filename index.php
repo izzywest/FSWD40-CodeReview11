@@ -51,6 +51,7 @@ if( isset($_POST['btn-login']) ) {
   } else {
    $errMSG = "Incorrect Credentials, Try again...";
   }
+
  }
 }
 ?>

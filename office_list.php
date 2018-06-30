@@ -61,7 +61,6 @@ CONTENT AFTER LOGIN
                 echo "<div class='loc_list'>";
                 echo "<ul class='list-group list-group-flush'>";
                 echo "<li class='list-group-item'><b>Office " . $row['office_name'] . "</b>, in " . $row['loc_name'] . "</li>";
-                // echo "<li class='list-group-item'>". $row['loc_name'] . "</li>";
                 echo "</ul>";
                 echo "</div>";
             }
@@ -74,26 +73,81 @@ CONTENT AFTER LOGIN
  </div>
 
 <!-- right column -->
+
+
+
+
+
+
     <div class="col">
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDhm1NjYliGN43KTiyer8qPKdI7C_nVaq0&callback=initMap"></script>
 
         <script type="text/javascript">
             function initialize() {
+           
                 var mapOptions = {
-                    zoom: 15,
-                    center: new google.maps.LatLng(48.2411378, 16.3506543),
+                    zoom: 11,
+                    center: new google.maps.LatLng(48.199050, 16.446690),
                     mapTypeId: google.maps.MapTypeId.MAP
                 };
                 var map = new google.maps.Map(document.getElementById("map-location"),
                     mapOptions);
 
+
+        var icons = {
+          parking: {
+            icon: 'style/img/caricon.png'
+          },
+          info: {
+            icon: 'style/img/officeicon.png'
+          }
+        };
+
+
+
+var features = [
+          {
+            position: new google.maps.LatLng(48.238952, 16.461739),
+            type: 'parking'
+          }, {
+            position: new google.maps.LatLng(48.207358, 16.270696),
+            type: 'parking'
+          }, {
+            position: new google.maps.LatLng(48.116142, 16.566010),
+            type: 'parking'
+          }, {
+            position: new google.maps.LatLng(48.158482, 16.394691),
+            type: 'parking'
+          }, {
+            position: new google.maps.LatLng(48.159582, 16.284142),
+            type: 'info'
+          }, {
+            position: new google.maps.LatLng(48.149868, 16.387635),
+            type: 'info'
+          }, {
+            position: new google.maps.LatLng(48.204421, 16.374607),
+            type: 'info'
+          }, {
+            position: new google.maps.LatLng(48.271368, 16.413731),
+            type: 'info'
+          }, {
+            position: new google.maps.LatLng(48.271368, 16.418482),
+            type: 'info'
+          }, {
+            position: new google.maps.LatLng(48.189870, 16.370377),
+            type: 'info'
+          }
+];
+  
+        // Create markers.
+        features.forEach(function(feature) {
                 var marker = new google.maps.Marker({
-                    map: map,
-                    draggable: false,
-                    position: new google.maps.LatLng(48.2411378, 16.3506543)
+                    position: feature.position,
+                    icon: icons[feature.type].icon,
+                    map: map
+                });
                 });
             }
-
             google.maps.event.addDomListener(window, 'resize', initialize);
             google.maps.event.addDomListener(window, 'load', initialize);
     </script>

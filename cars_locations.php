@@ -37,7 +37,6 @@ $result = $conn->query($sql);
 
 <body>
     <div class="container">
-    
 <!-- .............
 NAVBAR
 ............... -->
