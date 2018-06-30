@@ -24,7 +24,7 @@ $result = $conn->query($sql);
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Welcome <?php echo $userRow['userName']; ?></title>
+<title>Count cars at location</title>
 
 <link rel="shortcut icon" href="style/img/favicon.png" type="image/x-icon"/>
 <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
