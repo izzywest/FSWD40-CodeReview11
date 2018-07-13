@@ -3,9 +3,9 @@
 error_reporting( ~E_DEPRECATED & ~E_NOTICE );
 
 define('DBHOST', 'localhost');
-define('DBUSER', 'root');
-define('DBPASS', '');
-define('DBNAME', 'cr11_sw_php_car_rental');
+define('DBUSER', 'schahnaz');
+define('DBPASS', 'root');
+define('DBNAME', 'cr11');
 
 $conn = mysqli_connect(DBHOST,DBUSER,DBPASS,DBNAME);
 

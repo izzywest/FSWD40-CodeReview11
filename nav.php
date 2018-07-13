@@ -2,9 +2,6 @@
 
 <div class="nav_img alert alert-secondary"></div>
 
-
-
-
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <a class="navbar-brand" href="home.php"><img class="rotate logo" src="style/img/logoW.png" alt=""></a>
   

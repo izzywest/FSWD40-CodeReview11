@@ -17,7 +17,6 @@ if( isset($_POST['btn-login']) ) {
  $email = trim($_POST['email']);
  $email = strip_tags($email);
  $email = htmlspecialchars($email);
-
  $pass = trim($_POST['pass']);
  $pass = strip_tags($pass);
  $pass = htmlspecialchars($pass);
@@ -41,12 +40,13 @@ if( isset($_POST['btn-login']) ) {
  
   $password = hash('sha256', $pass); // password hashing
 
-  $res=mysqli_query($conn, "SELECT userId, userName, userPass FROM users WHERE userEmail='$email'");
+  $res=mysqli_query($conn, "SELECT * FROM users WHERE userEmail='$email'");
   $row=mysqli_fetch_array($res, MYSQLI_ASSOC);
   $count = mysqli_num_rows($res); // if uname/pass correct it returns must be 1 row
  
   if( $count == 1 && $row['userPass']==$password ) {
    $_SESSION['user'] = $row['userId'];
+   $_SESSION['type'] = $row['userType'];
    header("Location: home.php");
   } else {
    $errMSG = "Incorrect Credentials, Try again...";
@@ -55,6 +55,8 @@ if( isset($_POST['btn-login']) ) {
  }
 }
 ?>
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -87,8 +89,8 @@ if( isset($_POST['btn-login']) ) {
             <button class="btn btn-primary" type="submit" name="btn-login">Sign in</button>
             <hr/>
             <a href="register.php"><button type="button" class="btn btn-dark"><i class="fas fa-user-plus"></i> Sign up here</button></a>
-   </form>
 
+   </form>
 </div>
 </div>
 </body>

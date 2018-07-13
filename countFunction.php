@@ -78,8 +78,6 @@ WHERE loc_id=" . $selected_val . "; ";
 ?>
 
 </div>
-
-
 </div>
 
 <script src="script/main.js"></script>

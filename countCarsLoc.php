@@ -8,6 +8,12 @@ if( !isset($_SESSION['user']) ) {
  header("Location: index.php");
  exit;
 }
+
+// only admin
+if($_SESSION['type']!=='admin'){
+    header("Location: index.php");
+}
+
 // select logged-in users detail
 $res=mysqli_query($conn, "SELECT * FROM users WHERE userId=".$_SESSION['user']);
 $userRow=mysqli_fetch_array($res, MYSQLI_ASSOC);

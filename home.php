@@ -17,9 +17,6 @@ QUERY
 ------------- */
 $sql = "SELECT * FROM *";
 $result = $conn->query($sql);
-
-
-
 ?>
 
 
